@@ -1,3 +1,3 @@
 module.exports = {
-	extends: ['petrbulanek'],
+	extends: ['petrbulanek', 'plugin:storybook/recommended'],
 };
