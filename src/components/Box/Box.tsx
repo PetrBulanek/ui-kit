@@ -1,20 +1,14 @@
 import styled from '@emotion/styled';
 import shouldForwardProp from '@styled-system/should-forward-prop';
-import {
-	compose,
-	layout,
-	LayoutProps as StyledSystemLayoutProps,
-	space,
-	SpaceProps as StyledSystemSpaceProps,
-} from 'styled-system';
+import { FC } from 'react';
+import { compose, flexbox, layout, space } from 'styled-system';
+import { BoxProps } from '../../types';
 
-export interface BoxProps extends StyledSystemLayoutProps, StyledSystemSpaceProps {}
-
-export const Box = styled('div', {
+export const Box: FC<BoxProps> = styled('div', {
 	shouldForwardProp,
-})<BoxProps>(
+})(
 	{
 		minWidth: 0,
 	},
-	compose(layout, space),
+	compose(flexbox, layout, space),
 );
