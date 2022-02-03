@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import shouldForwardProp from '@styled-system/should-forward-prop';
 import { FC } from 'react';
-import { compose, flexbox, layout, space } from 'styled-system';
+import { color, compose, flexbox, grid, layout, position, space } from 'styled-system';
 import { BoxProps } from '../../types';
 
 export const Box: FC<BoxProps> = styled('div', {
@@ -10,5 +10,5 @@ export const Box: FC<BoxProps> = styled('div', {
 	{
 		minWidth: 0,
 	},
-	compose(flexbox, layout, space),
+	compose(color, flexbox, grid, layout, position, space),
 );
